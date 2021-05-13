@@ -32,8 +32,8 @@ namespace TaxaJurosApi.Api.Controllers
         /// <response code="202">Código de retorno caso o endpoint obtenha a taxa de juros corretamente.</response>
         /// <response code="400">Código de retorno caso o conteúdo da requisição esteja divergente da especificação ou em caso de erro ao obter a taxa de juros.</response>
         [HttpGet("/taxaJuros")]
-        [ProducesResponseType(typeof(double), (int)HttpStatusCode.Accepted)]
-        [ProducesResponseType(typeof(double), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(decimal), (int)HttpStatusCode.Accepted)]
+        [ProducesResponseType(typeof(decimal), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetTaxaJuros()
         {
             if (!ModelState.IsValid)
